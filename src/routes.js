@@ -3,8 +3,11 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import Erro from "./pages/Erro";
+import Produto from "./pages/Produto";
 
 import Header from "./components/Header";
+
 
 
 function RoutesApp() {
@@ -15,6 +18,9 @@ function RoutesApp() {
         <Route path="/" element={<Home/>}/>
         <Route path="/sobre" element={<About/>} />
         <Route path="/contato" element={<Contact/>} />
+        <Route path="/produto/:id" element={<Produto/>}/>
+
+        <Route path="*" element={<Erro/>}/>
       </Routes>
     </BrowserRouter>
   );
